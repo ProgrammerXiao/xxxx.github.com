@@ -1,17 +1,53 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Title</title>
 </head>
 <body>
-<h1>hello world</h1>
-<h1>吕洁婷你是猪吗？？？？</h1>
-<h1>吕洁婷你是猪吗？？？？</h1>
-<h1>吕洁婷你是猪吗？？？？</h1>
-<h1>吕洁婷你是猪吗？？？？</h1>
-<h1>吕洁婷你是猪吗？？？？</h1>
-<h1>吕洁婷你是猪吗？？？？</h1>
-<h1>吕洁婷你是猪吗？？？？</h1>
+
+
+<p>比较常用的音频格式mp3 wav wna</p>
+
+
+<!--第一种音频播放方式-->
+<!--controls="controls" 给音频播放器添加默认的控制器,如果不添加控制面板,网页中就不会显示音乐播放器-->
+<audio src="./other/hongsegaogenxie.mp3" controls="controls" id="audio" preload="preload"></audio>
+<button id="play">播放</button>
+<button id="pause">暂停</button>
+<span id="duration_time">1000</span>
+<script>
+
+    var audio = document.getElementById('audio');
+    var play_button = document.getElementById('play');
+    var pause_button = document.getElementById('pause');
+    //    audio.onclick = function () {
+    //
+    //    };
+    //在原生DOM操作中,给DOM对象添加事件监听器
+    play_button.addEventListener('click', function () {
+        //开始播放音乐
+        audio.play();
+    });
+    pause_button.addEventListener('click', function () {
+        audio.pause();
+    });
+    //
+    //
+    //    window.onload = function(){
+    //        audio.play();
+    //    }
+
+    var span = document.getElementById('duration_time');
+    span.addEventListener('click', function(){
+        //获取播放时长
+        var d = audio.duration;
+        this.innerHTML = d + '秒';
+    })
+
+
+</script>
+
+
 </body>
 </html>
