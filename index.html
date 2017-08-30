@@ -1,54 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+<head lang="en">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title></title>
 </head>
 <body>
-
-
-<h1>来听听红色高跟鞋吧！！</h1>
-
-
-<!--第一种音频播放方式-->
-<!--controls="controls" 给音频播放器添加默认的控制器,如果不添加控制面板,网页中就不会显示音乐播放器-->
-<audio src="./other/hongsegaogenxie.mp3" controls="controls" id="audio" preload="preload"></audio>
-<button id="play">播放</button>
-<button id="pause">暂停</button>
-<span id="duration_time">1000</span>
-<img src="./image/psb.jpg" alt="">
-<script>
-
-    var audio = document.getElementById('audio');
-    var play_button = document.getElementById('play');
-    var pause_button = document.getElementById('pause');
-    //    audio.onclick = function () {
-    //
-    //    };
-    //在原生DOM操作中,给DOM对象添加事件监听器
-    play_button.addEventListener('click', function () {
-        //开始播放音乐
-        audio.play();
-    });
-    pause_button.addEventListener('click', function () {
-        audio.pause();
-    });
-    //
-    //
-    //    window.onload = function(){
-    //        audio.play();
-    //    }
-
-    var span = document.getElementById('duration_time');
-    span.addEventListener('click', function(){
-        //获取播放时长
-        var d = audio.duration;
-        this.innerHTML = d + '秒';
-    })
-
-
-</script>
-
-
+<div id="box">
+    <canvas id="canvas"></canvas>
+</div>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
