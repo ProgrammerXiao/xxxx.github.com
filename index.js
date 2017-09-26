@@ -5,7 +5,7 @@ var canvas = document.getElementById("canvas"),
     c = canvas.getContext("2d"),
     W = canvas.width = 800,
     H = canvas.height = 600;
-var ballX = W / 2, ballY = H / 2, ballR = 10, ballVx = 8, ballVy = 2,
+var ballX = W / 2, ballY = H / 2, ballR = 10, ballVx = 8, ballVy = 1.5,
     panelW = 10, panelH = 100, panel1Y = (H - panelH) / 2, panel2Y = (H - panelH) / 2,
     player1Score = 0, player2Score = 0, winnerScore = 3,
     isEnd = 0;
