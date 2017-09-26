@@ -34,9 +34,9 @@ function animate() {
     }
     drawNet();
     if (panel2Y + panelH / 2 < ballY - 40) {
-        panel2Y = panel2Y + 5;
+        panel2Y = panel2Y + 10;
     } else if (panel2Y + panelH / 2 > ballY + 40) {
-        panel2Y = panel2Y - 5;
+        panel2Y = panel2Y - 10;
     }
     ballX += ballVx;
     ballY += ballVy;
